@@ -53,5 +53,16 @@ export default class DataService{
         var items= await fetch('http://localhost/restGSB/majRapports',requestOptions);
         return items;
     }
+    async majVisiteur(info){
+        var requestOptions={
+            method:"PUT",
+            headers:{
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify(info)
+        };
+        var items= await fetch('http://localhost/restGSB/majVisiteur',requestOptions);
+        return items;
+    }
             
 }
